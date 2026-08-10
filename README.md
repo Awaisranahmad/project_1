@@ -24,4 +24,4 @@ Gym Pulse is a modern, responsive fitness website designed for the 2026 aestheti
 
 
 ```
-This project is for normal blue print
+This project is for normal blue print , you can use this for only give the concept and 
