@@ -21,3 +21,7 @@ Gym Pulse is a modern, responsive fitness website designed for the 2026 aestheti
 ├── js/
 │   └── script.js  # BMI Logic
 └── index.html      # Main Landing Page
+
+
+```
+This project is for normal blue print
