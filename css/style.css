@@ -139,6 +139,13 @@ nav ul li a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+.bmi-box label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
 .bmi-box input {
     width: 100%;
     padding: 15px;
@@ -180,4 +187,10 @@ footer {
 
 .social-links a:hover {
     color: var(--mocha);
+}
+
+/* Visible keyboard focus, so tabbing through the page is usable. */
+:focus-visible {
+    outline: 3px solid var(--mocha);
+    outline-offset: 2px;
 }
