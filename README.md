@@ -15,7 +15,6 @@ Gym Pulse is a modern, responsive fitness website designed for the 2026 aestheti
 
 ## 📂 Project Structure
 ```text
-├── assets/         # Images and Icons
 ├── css/
 │   └── style.css   # Main stylesheet
 ├── js/
@@ -26,3 +25,27 @@ Gym Pulse is a modern, responsive fitness website designed for the 2026 aestheti
 ```
 This project is for normal blue print , you can use this for only give the concept and 
 if you want some other project then meet and connect together with new ideas
+
+## 🧪 Tests
+No build step needed — the BMI calculator is covered by plain Node tests
+(no dependencies, no browser):
+
+```sh
+node --test tests/test-bmi.js
+```
+
+The suite runs the real `js/script.js` against a tiny DOM stub and checks
+valid results, invalid inputs (empty, non-numeric, zero, negative, out of
+range) and the page markup (unique section ids, no inline `onclick`,
+labelled inputs, `aria-live` result).
+
+## 📜 Changelog
+- **2026-11-24:** BMI calculator fixed — empty, non-numeric, zero or
+  negative inputs now show a clear error instead of `Infinity` or a
+  negative BMI; inputs are validated to 1–500 kg and 50–250 cm; categories
+  now use the standard WHO cut-offs (25 / 30). Inputs have real `<label>`s
+  and the result is announced via `aria-live="polite"`; inline `onclick`
+  replaced with `addEventListener`; the duplicate `id="services"` is fixed
+  (second section is now `id="specialities"`); the script moved to the end
+  of `<body>`; visible `:focus-visible` outline added. Tests: 10 checks
+  in `tests/test-bmi.js`, all passing (`node --test tests/test-bmi.js`).

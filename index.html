@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<script src="js/script.js"></script>
     <header>
         <div class="logo">
             <h2>Gym<span>Pulse</span></h2>
@@ -54,7 +53,7 @@
                 </article>
             </div>
         </section>
-        <section id="services" class="services">
+        <section id="specialities" class="services">
     <h2>Our Specialities</h2>
     <div class="services-container">
         <article class="card">
@@ -75,10 +74,12 @@
         <section id="bmi" class="bmi-section">
             <h2>Check Your BMI</h2>
             <div class="bmi-box">
-                <input type="number" placeholder="Weight (kg)">
-                <input type="number" placeholder="Height (cm)">
-                <button class="btn-main" onclick="calculateBMI()">Calculate Now</button>
-                <p class="result">Your BMI: --</p>
+                <label for="weight-input">Weight (kg)</label>
+                <input id="weight-input" type="number" min="1" max="500" step="0.1" inputmode="decimal" placeholder="Weight (kg)">
+                <label for="height-input">Height (cm)</label>
+                <input id="height-input" type="number" min="50" max="250" step="0.1" inputmode="decimal" placeholder="Height (cm)">
+                <button id="calculate-btn" class="btn-main" type="button">Calculate Now</button>
+                <p class="result" aria-live="polite">Your BMI: --</p>
             </div>
         </section>
 
@@ -92,5 +93,6 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
